@@ -4,20 +4,14 @@ NetInspect is a lightweight Python-based network traffic analyzer tool for real-
 
 ## Features
 
-- **Real-time packet capture:** Monitor network packets live.
-- **Protocol support:** Analyze Ethernet, IPv4, and TCP protocols.
-- **Customizable filters:** Focus on specific network traffic.
-- **Easy-to-use interface:** Simple command-line tool.
+- **Real-time Packet Capture:** Monitor network packets live.
+- **Protocol Support:** Analyze Ethernet, IPv4, and TCP protocols.
+- **Customizable Filters:** Focus on specific network traffic.
+- **Easy-to-use Interface:** Simple command-line tool.
 
 ## Installation
 
+To install NetInspect, you need to have Python 3.x and the pcapy library installed on your system. You can install NetInspect via pip:
+
 ```bash
-pip install netinspect .
-
-## Requirements 
-Requires Python 3.x and pcapy library.
-
-UsageCapture packets: netinspect --interface eth0Filter packets: netinspect --filter src_ip=192.168.1.1
-ContributingWe welcome contributions! Report bugs, request features, or contribute code on GitHub.
-LicenseReleased under the MIT License.
-ContactFor questions or feedback, email kidoflinuxfamily@gmail.com
+pip install netinspect

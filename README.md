@@ -1,9 +1,10 @@
 ## Code
-import pcapy
-from struct import unpack
-import socket
 
-class NetAnalyzer:
+  import pcapy
+import socket
+from struct import unpack
+
+class NetInspect:
     def __init__(self, interface):
         self.interface = interface
 
@@ -23,9 +24,6 @@ class NetAnalyzer:
             src_ip = socket.inet_ntoa(iph[8])
             dest_ip = socket.inet_ntoa(iph[9])
 
-            print('Source IP:', src_ip)
-            print('Destination IP:', dest_ip)
-
             tcp_header = data[iph_length+eth_length:iph_length+eth_length+20]
             tcph = unpack('!HHLLBBHHH', tcp_header)
 
@@ -34,22 +32,37 @@ class NetAnalyzer:
             sequence = tcph[2]
             acknowledgement = tcph[3]
 
-            print('Source Port:', src_port)
-            print('Destination Port:', dest_port)
-            print('Sequence:', sequence)
-            print('Acknowledgement:', acknowledgement)
-            print('-------------------------')
+            return {
+                'src_ip': src_ip,
+                'dest_ip': dest_ip,
+                'src_port': src_port,
+                'dest_port': dest_port,
+                'sequence': sequence,
+                'acknowledgement': acknowledgement
+            }
 
     def start_capture(self):
         cap = pcapy.open_live(self.interface, 65536, 1, 0)
         print(f"Listening on {self.interface}...")
         while True:
             (header, data) = cap.next()
-            self.analyze_packet(header, data)
+            packet_info = self.analyze_packet(header, data)
+            if packet_info:
+                self.print_packet_info(packet_info)
+
+    def print_packet_info(self, packet_info):
+        print('Source IP:', packet_info['src_ip'])
+        print('Destination IP:', packet_info['dest_ip'])
+        print('Source Port:', packet_info['src_port'])
+        print('Destination Port:', packet_info['dest_port'])
+        print('Sequence:', packet_info['sequence'])
+        print('Acknowledgement:', packet_info['acknowledgement'])
+        print('-------------------------')
 
 if __name__ == "__main__":
-    analyzer = NetAnalyzer('eth0')
-    analyzer.start_capture()
+    net_inspect = NetInspect('eth0')
+    net_inspect.start_capture()  
+
     
 # NetInspect
 NetInspect is a lightweight Python-based network traffic analyzer tool for real-time packet capture and analysis. It provides insights into network behavior, troubleshoots issues, and enhances security.

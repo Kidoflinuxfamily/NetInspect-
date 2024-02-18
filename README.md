@@ -12,7 +12,7 @@ NetInspect is a lightweight Python-based network traffic analyzer tool for real-
 ## Installation
 
 ```bash
-pip install netinspect
+pip install netinspect .
 
 Requires Python 3.x and pcapy library.
 

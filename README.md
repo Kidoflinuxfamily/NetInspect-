@@ -93,6 +93,10 @@ NetInspect is released under the MIT License.
   ## Contact
   For questions, feedback, or suggestions, you can reach out to us at our email - kidoflinuxfamily@gmail.com .
 
+  ## Install Dependencies:
+  Before running NetInspect, install any dependencies it requires. Since your tool depends on the pcapy library, you can install it using pip:
+  pip install pcapy
+
 ## Installation
 
 To install NetInspect, you need to have Python 3.x and the pcapy library installed on your system. You can install NetInspect via pip:

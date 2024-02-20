@@ -30,7 +30,7 @@ NetInspect is released under the MIT License.
   ## • Install Dependencies:
   Before running NetInspect, install any dependencies it requires. Since your tool depends on the pcapy library, you can install it using pip:
   
-  pip install pcapy
+ * pip install pcapy
 
   ## • Installation in kali linux:
 
@@ -38,25 +38,25 @@ NetInspect is released under the MIT License.
 
   First install pip:
 
-  apt install python3-pip
+ * apt install python3-pip
 
   1. Clone the Repository: If you haven't already, clone the repository containing the NetInspect tool code onto your Kali Linux system. Open a terminal and use the following command:
 
-git clone https://github.com/Kidoflinuxfamily/NetInspect-.git
+* git clone https://github.com/Kidoflinuxfamily/NetInspect-.git
 
 2. Navigate to the Repository: Use the cd command to move into the directory where you cloned the repository:
 
-cd NetInspect
+ * cd NetInspect
 
 3. Install Dependencies: Before running the NetInspect tool, you need to ensure that the necessary dependencies are installed. In this case, the tool relies on the pcapy library. You can install it using pip:
 
-   pip install pcapy 
+* pip install pcapy 
 
    Ensure that you have Python 3.x installed on your system.
 
    4. Run the Tool: Once you have installed the dependencies, you can run the NetInspect tool using the following command:
 
-   python netinspect.py
+*  python netinspect.py 
 
    5. Capture Network Traffic:
    NetInspect should now be capturing and analyzing network traffic on the specified interface. You'll see output displaying information about each packet captured.
@@ -71,4 +71,5 @@ To install NetInspect, you need to have Python 3.x and the pcapy library install
 
 ```bash
 pip install netinspect
+
 

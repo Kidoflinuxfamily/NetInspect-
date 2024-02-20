@@ -1,14 +1,14 @@
-## NetInspect
+## • NetInspect
 NetInspect is a lightweight Python-based network traffic analyzer tool for real-time packet capture and analysis. It provides insights into network behavior, troubleshoots issues, and enhances security.
 
-## Features
+## • Features
 
 - **Real-time Packet Capture:** Monitor network packets live.
 - **Protocol Support:** Analyze Ethernet, IPv4, and TCP protocols.
 - **Customizable Filters:** Focus on specific network traffic.
 - **Easy-to-use Interface:** Simple command-line tool.
 
-  ## Usage
+  ## • Usage
   Once installed, you can use NetInspect from the command line. Here are some examples of common usage:
   * Capture Packets on a Specific Interface:
   netinspect --interface eth0
@@ -18,21 +18,21 @@ NetInspect is a lightweight Python-based network traffic analyzer tool for real-
 For more options and usage instructions, you can use the --help flag:
 netinspect --help
 
-## Contributing
+## • Contributing
 We welcome contributions from the community! If you encounter any bugs, have feature requests, or would like to contribute code, please feel free to submit a pull request or open an issue on GitHub.
 
-## License
+## • License
 NetInspect is released under the MIT License.
 
-  ## Contact
+  ## • Contact
   For questions, feedback, or suggestions, you can reach out to us at our email - kidoflinuxfamily@gmail.com .
 
-  ## Install Dependencies:
+  ## • Install Dependencies:
   Before running NetInspect, install any dependencies it requires. Since your tool depends on the pcapy library, you can install it using pip:
   
   pip install pcapy
 
-  ## Installation in kali linux:
+  ## • Installation in kali linux:
 
   To install and run the NetInspect tool on Kali Linux, you can follow these steps:
 
@@ -52,26 +52,6 @@ cd NetInspect
 
    pip install pcapy 
 
-  <!-- Include Clipboard.js library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-
-<!-- Add copy button for pip install command -->
-<button class="copy-btn" data-clipboard-text="pip install pcapy">Copy pip install pcapy</button>
-
-<!-- Initialize Clipboard.js -->
-<script>
-    var clipboard = new ClipboardJS('.copy-btn');
-
-    clipboard.on('success', function (e) {
-        e.clearSelection();
-        alert('Copied "pip install pcapy" to clipboard!');
-    });
-
-    clipboard.on('error', function (e) {
-        console.error('Failed to copy "pip install pcapy":', e);
-    });
-</script> 
-
    Ensure that you have Python 3.x installed on your system.
 
    4. Run the Tool: Once you have installed the dependencies, you can run the NetInspect tool using the following command:
@@ -85,7 +65,7 @@ Ensure that you have the necessary permissions to capture network traffic on you
 
 That's it! You've successfully installed and run the NetInspect tool on Kali Linux. 
 
-## Installation
+## • Installation
 
 To install NetInspect, you need to have Python 3.x and the pcapy library installed on your system. You can install NetInspect via pip:
 

@@ -50,7 +50,25 @@ cd NetInspect
 
 3. Install Dependencies: Before running the NetInspect tool, you need to ensure that the necessary dependencies are installed. In this case, the tool relies on the pcapy library. You can install it using pip:
 
-   pip install pcapy
+  <!-- Include Clipboard.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<!-- Add copy button for pip install command -->
+<button class="copy-btn" data-clipboard-text="pip install pcapy">Copy pip install pcapy</button>
+
+<!-- Initialize Clipboard.js -->
+<script>
+    var clipboard = new ClipboardJS('.copy-btn');
+
+    clipboard.on('success', function (e) {
+        e.clearSelection();
+        alert('Copied "pip install pcapy" to clipboard!');
+    });
+
+    clipboard.on('error', function (e) {
+        console.error('Failed to copy "pip install pcapy":', e);
+    });
+</script> 
 
    Ensure that you have Python 3.x installed on your system.
 
